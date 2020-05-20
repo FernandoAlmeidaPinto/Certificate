@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}  
+    </header>
+    <main>
+        <img class="image-static" src="{% static 'temp/certificado.png' %}" alt="{% static 'temp/certificado.png' %}">
+        <a class='atualizaimagem'  href="{% static 'temp/certificado.png' %}"><h4>imagem</h4></a>
+    </main>
+    <aside>
+        <div class="forms">
+            <form class='main_form' enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <th>Certificado</th>
+                        <th>{{cert.name}}</th>
+                    </tr>
+                    <tr>
+                        <th>Evento</th>
+                        <th>{{model.event}}</th>
+                    </tr>
+                    <tr>
+                        <th>Data</th>
+                        <th>{{model.date}}</th>
+                    </tr>
+                    <tr>
+                        <th>Body</th>
+                        <th>{{model.body}}</th>
+                    </tr>
+                </table>
+                    <button id="submit_forms" type="submit" class="btn btn-primary" value="Preview" name="system">
+                        Preview</button>
+            </form>
+        </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <th>Importe Planilha</th>
+                    </tr>
+                    <tr>
+                        <th>{{model.plan}}</th>
+                        <th><button id="submit_forms" type="submit" class="btn btn-success" value="Finalizar" name="system">
+                            Finalizar</button>
+                        </form></th>
+                    </tr>
+                </table>
+                <div class="alert alert-warning">
+                    <strong>Cuidado!</strong> Certifique-se de apenas Finalizar o seu Projeto, 
+                    quando tiver certeza que seu certificado está correto.
+                  </div>
+                <div class="alert alert-primary">
+                    <strong>Observação!</strong> Caso o Botão Preview não esteja funcionando, você pode visualizar seu certificado no botão 'imagem' logo a baixo do seu certificado e mandar atualizar
+                </div>
+    </aside>
+{% endblock %}

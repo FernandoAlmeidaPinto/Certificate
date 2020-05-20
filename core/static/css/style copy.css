@@ -1,0 +1,82 @@
+body {
+ margin: 0;
+ padding: 0;
+ display: grid;
+ grid-template-columns: 1fr 7fr 5fr 1fr;
+ grid-template-rows: 10vh 80vh 10vh;
+ font-family: Arial, Helvetica, sans-serif;
+ background: #1d1e20;
+ color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu Principal */
+
+header {
+    background: #1d1e20;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}.menu {
+    display: flex;
+}.menu li {
+    margin-left: 20px;
+    list-style: none;
+}.menu li a {
+    display: block;
+    padding: 10px;
+
+}
+
+/* Menu da Minha Preview */
+
+main {
+
+    margin: auto;
+    grid-column: 2/3;
+}
+
+.atualizaimagem a{
+    color: red;
+    text-decoration: none;
+}
+
+.atualizaimagem a:hover{
+    color: white;
+}
+
+.atualizaimagem a:active {
+    color: royalblue;
+}
+
+/* Preview */
+
+aside {
+    padding: 30px;
+    grid-column: 3/4;
+
+}
+
+.form {
+    padding: 5px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+img {
+    width: 110vh;
+    box-shadow: 5px 5px 8px black;
+}
+
+/* Cabeçalho */
+
+footer {
+    margin: auto;
+    color: white;
+    grid-column: 1/5;
+}

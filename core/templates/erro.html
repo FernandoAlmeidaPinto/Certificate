@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <script type="text/javascript">
+    // using jQuery
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+    </script>
+    </header>
+    <main>
+        <img src="{% static 'temp/certificado.png' %}" alt="">
+    </main>
+    <aside>
+        <div class="alert alert-danger">
+            <strong>Error!</strong> Houve um Problema ao enviar seus Certificados. Verifique o formato de sua planilha ou entre en contato com o administrador.
+          </div>
+    </aside>
+{% endblock %}

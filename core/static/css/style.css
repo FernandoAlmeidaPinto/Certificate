@@ -1,0 +1,65 @@
+body {
+ margin: 0;
+ padding: 0;
+ display: grid;
+ grid-template-columns: 1fr 7fr 5fr 1fr;
+ grid-template-rows: 10vh 80vh 10vh;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menu Principal */
+
+header {
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu da Minha Preview */
+
+main {
+
+    margin: auto;
+    grid-column: 2/3;
+}
+
+.atualizaimagem a{
+    color: red;
+    text-decoration: none;
+}
+
+.atualizaimagem a:hover{
+    color: white;
+}
+
+.atualizaimagem a:active {
+    color: royalblue;
+}
+
+/* Preview */
+
+aside {
+    padding: 30px;
+    grid-column: 3/4;
+
+}
+
+.form {
+    padding: 5px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.image-static {
+    width: 110vh;
+    box-shadow: 5px 5px 8px black;
+    border: 1px solid #000
+}
+
+/* Cabeçalho */
+
+footer {
+    margin: auto;
+    grid-column: 1/5;
+}

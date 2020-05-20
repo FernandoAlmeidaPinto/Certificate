@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Support</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <p class="text-right">...</p>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'core:index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:support' %}">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:contato' %}">Contatos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:logout' %}">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+<div class="jumbotron text-center">
+  <h1>Importante</h1>
+  <p>Segue algumas informações importantes</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <h3>Formato da Planilha</h3>
+        <div class="alert alert-warning">
+            <strong>Importante!</strong> A planilha deve ser salva em formato .csv (separado por vírgula)
+          </div>
+          <img src="{% static 'image/Planilha.png' %}" alt="">
+        </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Formato das colunas</h3>
+            <div class="alert alert-info">
+              <strong>Info!</strong> Ao criar sua planilha, lembre-se de deve existir uma coluna para Nome (que irão para o certificado) e E-mail que serão encaminhados
+            </div>
+            <img src="{% static 'image/Planilha2.png' %}" alt="">
+          </div>
+    </div>
+  </div>
+<footer>
+    <div style="text-align: center; padding: 15px;">
+        <strong>Criado por:</strong> Fernando Almeida
+      </div>
+</footer>
+</body>
+</html>
