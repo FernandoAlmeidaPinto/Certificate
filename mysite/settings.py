@@ -123,3 +123,20 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'core', 'media')
 MEDIA_URL = '/media/'
 MEDIA_STATIC = os.path.join(BASE_DIR, 'core', 'static', 'temp/')
+
+
+#Heroku Settings
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PHOTO', 'http')
+
+ALLOWED_HOSTS = ['*']
+
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
